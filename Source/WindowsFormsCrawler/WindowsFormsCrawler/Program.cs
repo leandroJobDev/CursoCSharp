@@ -4,19 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Loja
+namespace WindowsFormsCrawler
 {
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Ponto de entrada principal para o aplicativo.
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIParent1());
+            Application.Run(new Form1());
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7024C446-F369-4251-9B83-BAEB7BAE74F2}</ProjectGuid>
+    <ProjectGuid>{FC7FD261-1F85-48AF-8812-ABB57EEBE054}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Loja</RootNamespace>
-    <AssemblyName>Loja</AssemblyName>
+    <RootNamespace>WindowsFormsCrawler</RootNamespace>
+    <AssemblyName>WindowsFormsCrawler</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MDIParent1.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDIParent1.Designer.cs">
-      <DependentUpon>MDIParent1.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MDIParent1.resx">
-      <DependentUpon>MDIParent1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,16 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Loja.BLL\Loja.BLL.csproj">
-      <Project>{ae14f7b3-7edb-49e2-a343-c6117016d1f7}</Project>
-      <Name>Loja.BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Loja.DTO\Loja.DTO.csproj">
-      <Project>{cb03bafc-20e6-4ea9-9d38-04353bfb2288}</Project>
-      <Name>Loja.DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

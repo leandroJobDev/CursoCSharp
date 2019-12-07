@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Loja.Properties
+namespace WindowsFormsCrawler.Properties
 {
 
 
