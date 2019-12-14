@@ -95,5 +95,12 @@ namespace Loja
                 childForm.Close();
             }
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form childForm = new Cadastro_Usuario();
+            childForm.MdiParent = this;
+            childForm.Show();
+        }
     }
 }
