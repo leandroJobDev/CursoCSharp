@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Loja.DTO
 {
-    class usuario_DTO
+    public class usuario_DTO
     {
         public int idUser { get; set; }
         public string name { get; set; }
