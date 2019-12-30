@@ -14,7 +14,7 @@ namespace Loja
 {
     public partial class Cadastro_Usuario : Form
     {
-        string modo = string.Empty;
+        string modo = "";
         public Cadastro_Usuario()
         {
             InitializeComponent();
@@ -23,6 +23,11 @@ namespace Loja
         private void Cadastro_Usuario_Load(object sender, EventArgs e)
         {
 
+            carregaGrid();
+        }
+
+        public void carregaGrid()
+        {
             try
             {
                 IList<usuario_DTO> listUsuario_DTO = new List<usuario_DTO>();
@@ -34,10 +39,18 @@ namespace Loja
             {
                 throw ex;
             }
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
+        private void Cadastro_Usuario_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'loja2DataSet.tbUser' table. You can move, or remove it, as needed.
+            this.tbUserTableAdapter.Fill(this.loja2DataSet.tbUser);
 
+        }
     }
 }

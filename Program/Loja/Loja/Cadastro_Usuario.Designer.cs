@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,20 @@
             this.cboSituacao = new System.Windows.Forms.ComboBox();
             this.cboPerfil = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.loja2DataSet = new Loja.Loja2DataSet();
+            this.tbUserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbUserTableAdapter = new Loja.Loja2DataSetTableAdapters.tbUserTableAdapter();
+            this.idUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.registerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.situationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perfilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loja2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUserBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -179,11 +193,85 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 353);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUserDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.loginDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.registerDataGridViewTextBoxColumn,
+            this.situationDataGridViewTextBoxColumn,
+            this.perfilDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tbUserBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(46, 343);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(349, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(347, 123);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // loja2DataSet
+            // 
+            this.loja2DataSet.DataSetName = "Loja2DataSet";
+            this.loja2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbUserBindingSource
+            // 
+            this.tbUserBindingSource.DataMember = "tbUser";
+            this.tbUserBindingSource.DataSource = this.loja2DataSet;
+            // 
+            // tbUserTableAdapter
+            // 
+            this.tbUserTableAdapter.ClearBeforeFill = true;
+            // 
+            // idUserDataGridViewTextBoxColumn
+            // 
+            this.idUserDataGridViewTextBoxColumn.DataPropertyName = "idUser";
+            this.idUserDataGridViewTextBoxColumn.HeaderText = "idUser";
+            this.idUserDataGridViewTextBoxColumn.Name = "idUserDataGridViewTextBoxColumn";
+            this.idUserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // registerDataGridViewTextBoxColumn
+            // 
+            this.registerDataGridViewTextBoxColumn.DataPropertyName = "register";
+            this.registerDataGridViewTextBoxColumn.HeaderText = "register";
+            this.registerDataGridViewTextBoxColumn.Name = "registerDataGridViewTextBoxColumn";
+            // 
+            // situationDataGridViewTextBoxColumn
+            // 
+            this.situationDataGridViewTextBoxColumn.DataPropertyName = "situation";
+            this.situationDataGridViewTextBoxColumn.HeaderText = "situation";
+            this.situationDataGridViewTextBoxColumn.Name = "situationDataGridViewTextBoxColumn";
+            // 
+            // perfilDataGridViewTextBoxColumn
+            // 
+            this.perfilDataGridViewTextBoxColumn.DataPropertyName = "perfil";
+            this.perfilDataGridViewTextBoxColumn.HeaderText = "perfil";
+            this.perfilDataGridViewTextBoxColumn.Name = "perfilDataGridViewTextBoxColumn";
             // 
             // Cadastro_Usuario
             // 
@@ -208,7 +296,10 @@
             this.Controls.Add(this.label1);
             this.Name = "Cadastro_Usuario";
             this.Text = "Cadastro_Usuario";
+            this.Load += new System.EventHandler(this.Cadastro_Usuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loja2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUserBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +323,16 @@
         private System.Windows.Forms.ComboBox cboSituacao;
         private System.Windows.Forms.ComboBox cboPerfil;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Loja2DataSet loja2DataSet;
+        private System.Windows.Forms.BindingSource tbUserBindingSource;
+        private Loja2DataSetTableAdapters.tbUserTableAdapter tbUserTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn registerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn situationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perfilDataGridViewTextBoxColumn;
     }
 }
